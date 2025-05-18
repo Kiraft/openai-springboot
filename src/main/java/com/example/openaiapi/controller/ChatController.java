@@ -18,4 +18,9 @@ public class ChatController {
     public String chat(@RequestParam(value="prompt") String prompt) {
         return chatServices.generateResult(prompt);
     }
+
+    @GetMapping("/")
+    public String index(){
+        return "Estoy funcionando";
+    }
 }
